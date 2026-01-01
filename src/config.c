@@ -324,13 +324,21 @@ void config_save()
     free(data);
 }
 
+extern char gPluginConfigDir[MAX_PATH];
 void config_initialize()
 {
-    SHGetFolderPathA(NULL,
-        CSIDL_APPDATA,
-        NULL,
-        0,
-        configpath);
+    if (*gPluginConfigDir)
+    {
+        strcpy_s(configpath, _MAX_PATH, gPluginConfigDir);
+    }
+    else
+    {
+        SHGetFolderPathA(NULL,
+            CSIDL_APPDATA,
+            NULL,
+            0,
+            configpath);
+    }
     PathAppendA(configpath, "Octomino\\cfg.ini");
 
     concfg_set_defaults(&concfg);
