@@ -1,7 +1,7 @@
 Octomino's SDL Input Plugin
 ===========================
 An input plugin for Zilmar spec emulators including Project 64 1.6. It 
-uses SDL2's GameController API and supports many gamepads including Xbox, 
+uses SDL3's Gamepad API and supports many gamepads including Xbox, 
 PS4, and Switch Pro.
 
 This is a fork of [clickdevin/octomino-sdl-input](https://github.com/clickdevin/octomino-sdl-input), focused on adding a configuration GUI as well as new features.
@@ -9,7 +9,7 @@ This is a fork of [clickdevin/octomino-sdl-input](https://github.com/clickdevin/
 Downloading
 -----------
 The latest release can be downloaded from 
-[here](https://github.com/wermipls/octomino-sdl-input/releases).
+[here](https://github.com/Luna-Project64/octomino-sdl-input/releases).
 
 Installing
 ----------
@@ -18,21 +18,16 @@ emulator's plugins folder.
 
 Building from source
 --------------------
-To build from source, use [MSYS2](https://www.msys2.org/) with the 
-following packages:
- - `mingw-w64-i686-gcc`
- - `mingw-w64-i686-SDL2`
- - `make`
- - `wget`
- - `zip`
+Make sure to check out the repository with submodules:
+```
+git clone --recursive https://github.com/Luna-Project64/octomino-sdl-input
+```
+Or, if you have cloned the repository already:
+```
+git submodule update --init
+```
 
-Then, using the `MINGW32` subsystem, run `make all` from the project's 
-root directory.
-
-Other MinGW distributions will also likely work, provided you have the 
-proper tools installed.
-
-Additionally, `gamecontrollerdb.txt` can be updated using `make update-db`.
+Visual Studio 2022 toolchain with clang-cl is used for building. Either open the .sln in the IDE, or open the "Developer Command Prompt for VS2022" and run `msbuild`.
 
 License
 -------

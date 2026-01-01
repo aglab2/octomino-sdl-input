@@ -40,14 +40,44 @@ static int uint_slider(mu_Context *ctx, unsigned int *value, int low, int high) 
     return res;
 }
 
+static const char *get_con_specialized_button_label(enum ButtonAxis ba)
+{
+    if (!con) {
+        return NULL;
+    }
+
+    SDL_GamepadButton btn = SDL_GAMEPAD_BUTTON_INVALID;
+    switch (ba) {
+        case CONTROLLER_NORTH: btn = SDL_GAMEPAD_BUTTON_NORTH; break;
+        case CONTROLLER_SOUTH: btn = SDL_GAMEPAD_BUTTON_SOUTH; break;
+        case CONTROLLER_WEST:  btn = SDL_GAMEPAD_BUTTON_WEST; break;
+        case CONTROLLER_EAST:  btn = SDL_GAMEPAD_BUTTON_EAST; break;
+    }
+
+    SDL_GamepadButtonLabel label = SDL_GetGamepadButtonLabel(con, btn);
+
+    switch (label) {
+        case SDL_GAMEPAD_BUTTON_LABEL_A:        return "A";
+        case SDL_GAMEPAD_BUTTON_LABEL_B:        return "B";
+        case SDL_GAMEPAD_BUTTON_LABEL_X:        return "X";
+        case SDL_GAMEPAD_BUTTON_LABEL_Y:        return "Y";
+        case SDL_GAMEPAD_BUTTON_LABEL_CROSS:    return "Cross";
+        case SDL_GAMEPAD_BUTTON_LABEL_CIRCLE:   return "Circle";
+        case SDL_GAMEPAD_BUTTON_LABEL_SQUARE:   return "Square";
+        case SDL_GAMEPAD_BUTTON_LABEL_TRIANGLE: return "Triangle";
+    }
+
+    return NULL;
+}
+
 static const char *get_con_buttonaxis_name(enum ButtonAxis ba)
 {
-    static const char names[][64] = {
+    static const char *names[] = {
         "Not set",
-        "A",
-        "B",
-        "X",
-        "Y",
+        "South",
+        "East",
+        "West",
+        "North",
         "Back",
         "Guide",
         "Start",
@@ -71,7 +101,13 @@ static const char *get_con_buttonaxis_name(enum ButtonAxis ba)
         "Right Trigger",
     };
 
-    return names[ba];
+    if (ba >= CONTROLLER_ENUM_END) {
+        return "Unknown";
+    }
+
+    const char *label = get_con_specialized_button_label(ba);
+
+    return label ? label : names[ba];
 }
 
 static void log_panel(mu_Context *ctx) {

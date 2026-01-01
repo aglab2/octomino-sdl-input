@@ -62,11 +62,11 @@ static void concfg_set_defaults(ControllerConfig *cfg)
     cfg->a2d_trig = 0.25;
 
     // default controls
-    cfg->a.primary        = CONTROLLER_A;
-    cfg->a.secondary      = CONTROLLER_B;
+    cfg->a.primary        = CONTROLLER_SOUTH;
+    cfg->a.secondary      = CONTROLLER_EAST;
 
-    cfg->b.primary        = CONTROLLER_X;
-    cfg->b.secondary      = CONTROLLER_Y;
+    cfg->b.primary        = CONTROLLER_WEST;
+    cfg->b.secondary      = CONTROLLER_NORTH;
 
     cfg->z.primary        = CONTROLLER_LTRIG;
     cfg->l.primary        = CONTROLLER_LSHOULDER;

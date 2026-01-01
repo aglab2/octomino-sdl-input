@@ -166,13 +166,13 @@ static int16_t get_state_buttonaxis(inputs_t *i, enum ButtonAxis ba)
     {
         case CONTROLLER_NOT_SET:
             return 0;
-        case CONTROLLER_A:
+        case CONTROLLER_SOUTH:
             return i->a;
-        case CONTROLLER_B:
+        case CONTROLLER_EAST:
             return i->b;
-        case CONTROLLER_X:
+        case CONTROLLER_WEST:
             return i->x;
-        case CONTROLLER_Y:
+        case CONTROLLER_NORTH:
             return i->y;
         case CONTROLLER_BACK:
             return i->back;

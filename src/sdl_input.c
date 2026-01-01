@@ -74,9 +74,13 @@ void con_open(void)
         return;
     }
 
-    if (con != NULL) {
-        dlog("Failed to open a controller: controller is not null");
-        return;
+    if (con) {
+        if (SDL_GamepadConnected(con)) {
+            dlog("Failed to open a controller: a controller is already open and connected");
+            return;
+        } else {
+            con_close();
+        }
     }
 
     int count;
@@ -230,13 +234,7 @@ void con_get_inputs(inputs_t *i)
         {
         case SDL_EVENT_GAMEPAD_ADDED:
             dlog("A device has been added");
-            if (con == NULL)
-            {
-                dlog("    ...and there is no active controller");
-                con_open();
-            }
-            else
-                dlog("    ...but there is already an active controller");
+            con_open();
             break;
         case SDL_EVENT_GAMEPAD_REMOVED:
             dlog("A device has been removed");
@@ -244,7 +242,6 @@ void con_get_inputs(inputs_t *i)
             {
                 dlog("    ...it was the active controller");
                 con_close();
-                con_open();
             }
             else
                 dlog("    ...it was not the active controller");
