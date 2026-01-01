@@ -217,4 +217,5 @@ void r_present(void) {
 void r_close(void) {
     SDL_DestroyWindow(dialogWindow);
 	SDL_DestroyWindow(parentWindow);
+    SDL_QuitSubSystem(SDL_INIT_JOYSTICK | SDL_INIT_VIDEO);
 }

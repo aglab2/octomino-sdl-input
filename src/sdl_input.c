@@ -28,7 +28,7 @@ void try_init(void)
     dlog("Initializing");
 
     SDL_SetMainReady();
-    if (SDL_Init(SDL_INIT_GAMEPAD))
+    if (SDL_Init(SDL_INIT_EVENTS | SDL_INIT_GAMEPAD))
     {
         /* deal with the unnessessary initial controller connected
            events so they don't clog up the log file */
@@ -56,7 +56,7 @@ void deinit(void)
     dlog("Deinitializing");
 
     con_close();
-    SDL_QuitSubSystem(SDL_INIT_GAMEPAD);
+    SDL_QuitSubSystem(SDL_INIT_EVENTS | SDL_INIT_GAMEPAD);
     initialized = 0;
 }
 

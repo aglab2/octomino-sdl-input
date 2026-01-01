@@ -95,6 +95,12 @@
     <ClCompile Include="SDL\src\timer\windows\SDL_systimer.c">
       <Filter>Source Files\SDL</Filter>
     </ClCompile>
+    <ClCompile Include="SDL\src\tray\dummy\SDL_tray.c">
+      <Filter>Source Files\SDL</Filter>
+    </ClCompile>
+    <ClCompile Include="SDL\src\tray\SDL_tray_utils.c">
+      <Filter>Source Files\SDL</Filter>
+    </ClCompile>
     <ClCompile Include="SDL\src\SDL_log.c">
       <Filter>Source Files\SDL</Filter>
     </ClCompile>
@@ -102,6 +108,9 @@
       <Filter>Source Files\SDL</Filter>
     </ClCompile>
     <ClCompile Include="SDL\src\events\SDL_events.c">
+      <Filter>Source Files\SDL</Filter>
+    </ClCompile>
+    <ClCompile Include="SDL\src\events\SDL_eventwatch.c">
       <Filter>Source Files\SDL</Filter>
     </ClCompile>
     <ClCompile Include="SDL\src\joystick\SDL_steam_virtual_gamepad.c">
@@ -116,10 +125,22 @@
     <ClCompile Include="SDL\src\joystick\hidapi\SDL_hidapijoystick.c">
       <Filter>Source Files\SDL</Filter>
     </ClCompile>
+    <ClCompile Include="SDL\src\joystick\hidapi\SDL_hidapi_8bitdo.c">
+      <Filter>Source Files\SDL</Filter>
+    </ClCompile>
     <ClCompile Include="SDL\src\joystick\hidapi\SDL_hidapi_combined.c">
       <Filter>Source Files\SDL</Filter>
     </ClCompile>
+    <ClCompile Include="SDL\src\joystick\hidapi\SDL_hidapi_flydigi.c">
+      <Filter>Source Files\SDL</Filter>
+    </ClCompile>
     <ClCompile Include="SDL\src\joystick\hidapi\SDL_hidapi_gamecube.c">
+      <Filter>Source Files\SDL</Filter>
+    </ClCompile>
+    <ClCompile Include="SDL\src\joystick\hidapi\SDL_hidapi_gip.c">
+      <Filter>Source Files\SDL</Filter>
+    </ClCompile>
+    <ClCompile Include="SDL\src\joystick\hidapi\SDL_hidapi_lg4ff.c">
       <Filter>Source Files\SDL</Filter>
     </ClCompile>
     <ClCompile Include="SDL\src\joystick\hidapi\SDL_hidapi_luna.c">
@@ -140,6 +161,9 @@
     <ClCompile Include="SDL\src\joystick\hidapi\SDL_hidapi_shield.c">
       <Filter>Source Files\SDL</Filter>
     </ClCompile>
+    <ClCompile Include="SDL\src\joystick\hidapi\SDL_hidapi_sinput.c">
+      <Filter>Source Files\SDL</Filter>
+    </ClCompile>
     <ClCompile Include="SDL\src\joystick\hidapi\SDL_hidapi_stadia.c">
       <Filter>Source Files\SDL</Filter>
     </ClCompile>
@@ -152,6 +176,9 @@
     <ClCompile Include="SDL\src\joystick\hidapi\SDL_hidapi_switch.c">
       <Filter>Source Files\SDL</Filter>
     </ClCompile>
+    <ClCompile Include="SDL\src\joystick\hidapi\SDL_hidapi_switch2.c">
+      <Filter>Source Files\SDL</Filter>
+    </ClCompile>
     <ClCompile Include="SDL\src\joystick\hidapi\SDL_hidapi_wii.c">
       <Filter>Source Files\SDL</Filter>
     </ClCompile>
@@ -162,6 +189,9 @@
       <Filter>Source Files\SDL</Filter>
     </ClCompile>
     <ClCompile Include="SDL\src\joystick\hidapi\SDL_hidapi_xboxone.c">
+      <Filter>Source Files\SDL</Filter>
+    </ClCompile>
+    <ClCompile Include="SDL\src\joystick\hidapi\SDL_hidapi_zuiki.c">
       <Filter>Source Files\SDL</Filter>
     </ClCompile>
     <ClCompile Include="SDL\src\timer\SDL_timer.c">
@@ -213,6 +243,9 @@
       <Filter>Source Files\SDL</Filter>
     </ClCompile>
     <ClCompile Include="SDL\src\video\SDL_rect.c">
+      <Filter>Source Files\SDL</Filter>
+    </ClCompile>
+    <ClCompile Include="SDL\src\video\SDL_rotate.c">
       <Filter>Source Files\SDL</Filter>
     </ClCompile>
     <ClCompile Include="SDL\src\thread\windows\SDL_systhread.c">
@@ -272,6 +305,9 @@
     <ClCompile Include="SDL\src\video\SDL_yuv.c">
       <Filter>Source Files\SDL</Filter>
     </ClCompile>
+    <ClCompile Include="SDL\src\video\SDL_stb.c">
+      <Filter>Source Files\SDL</Filter>
+    </ClCompile>
     <ClCompile Include="SDL\src\video\SDL_stretch.c">
       <Filter>Source Files\SDL</Filter>
     </ClCompile>
@@ -302,6 +338,12 @@
     <ClCompile Include="SDL\src\core\windows\SDL_xinput.c">
       <Filter>Source Files\SDL</Filter>
     </ClCompile>
+    <ClCompile Include="SDL\src\joystick\hidapi\SDL_report_descriptor.c">
+      <Filter>Source Files\SDL</Filter>
+    </ClCompile>
+    <ClCompile Include="SDL\src\joystick\gdk\SDL_gameinputjoystick.cpp">
+      <Filter>Source Files\SDL</Filter>
+    </ClCompile>
     <ClCompile Include="SDL\src\joystick\windows\SDL_dinputjoystick.c">
       <Filter>Source Files\SDL</Filter>
     </ClCompile>
@@ -323,7 +365,16 @@
     <ClCompile Include="SDL\src\haptic\SDL_haptic.c">
       <Filter>Source Files\SDL</Filter>
     </ClCompile>
+    <ClCompile Include="SDL\src\haptic\hidapi\SDL_hidapihaptic.c">
+      <Filter>Source Files\SDL</Filter>
+    </ClCompile>
+    <ClCompile Include="SDL\src\haptic\hidapi\SDL_hidapihaptic_lg4ff.c">
+      <Filter>Source Files\SDL</Filter>
+    </ClCompile>
     <ClCompile Include="SDL\src\render\SDL_yuv_sw.c">
+      <Filter>Source Files\SDL</Filter>
+    </ClCompile>
+    <ClCompile Include="SDL\src\misc\SDL_libusb.c">
       <Filter>Source Files\SDL</Filter>
     </ClCompile>
     <ClCompile Include="SDL\src\thread\generic\SDL_syscond.c">
@@ -372,6 +423,9 @@
       <Filter>Source Files\SDL</Filter>
     </ClCompile>
     <ClCompile Include="SDL\src\video\windows\SDL_windowsclipboard.c">
+      <Filter>Source Files\SDL</Filter>
+    </ClCompile>
+    <ClCompile Include="SDL\src\video\windows\SDL_windowsgameinput.cpp">
       <Filter>Source Files\SDL</Filter>
     </ClCompile>
     <ClCompile Include="SDL\src\video\windows\SDL_windowsframebuffer.c">
@@ -434,10 +488,19 @@
     <ClCompile Include="SDL\src\SDL_properties.c">
       <Filter>Source Files\SDL</Filter>
     </ClCompile>
-    <ClCompile Include="SDL\src\filesystem\SDL_filesystem.c">
+    <ClCompile Include="SDL\src\io\SDL_asyncio.c">
       <Filter>Source Files\SDL</Filter>
     </ClCompile>
-    <ClCompile Include="SDL\src\file\SDL_iostream.c">
+    <ClCompile Include="SDL\src\io\SDL_iostream.c">
+      <Filter>Source Files\SDL</Filter>
+    </ClCompile>
+    <ClCompile Include="SDL\src\io\generic\SDL_asyncio_generic.c">
+      <Filter>Source Files\SDL</Filter>
+    </ClCompile>
+    <ClCompile Include="SDL\src\io\windows\SDL_asyncio_windows_ioring.c">
+      <Filter>Source Files\SDL</Filter>
+    </ClCompile>
+    <ClCompile Include="SDL\src\filesystem\SDL_filesystem.c">
       <Filter>Source Files\SDL</Filter>
     </ClCompile>
     <ClCompile Include="SDL\src\filesystem\windows\SDL_sysfilesystem.c">
@@ -464,7 +527,7 @@
     <ClCompile Include="SDL\src\joystick\hidapi\SDL_hidapi_steam_hori.c">
       <Filter>Source Files\SDL</Filter>
     </ClCompile>
-    <ClCompile Include="SDL\src\video\windows\SDL_windowsgameinput.c">
+    <ClCompile Include="SDL\src\joystick\hidapi\SDL_hidapi_steam_triton.c">
       <Filter>Source Files\SDL</Filter>
     </ClCompile>
     <ClCompile Include="SDL\src\sensor\SDL_sensor.c">
@@ -501,6 +564,9 @@
       <Filter>Source Files\SDL</Filter>
     </ClCompile>
     <ClCompile Include="rundown_protection.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SDL\src\core\windows\SDL_gameinput.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

@@ -335,4 +335,18 @@ typedef unsigned int uintptr_t;
 #define SDL_CAMERA_DRIVER_MEDIAFOUNDATION 1
 #define SDL_CAMERA_DRIVER_DUMMY 1
 
+#define SDL_TRAY_DUMMY 1
+
+#define SDL_DISABLE_SSE 1
+#define SDL_DISABLE_SSE2 1
+#define SDL_DISABLE_SSE3 1
+#define SDL_DISABLE_SSE4_1 1
+#define SDL_DISABLE_SSE4_2 1
+#define SDL_DISABLE_AVX 1
+#define SDL_DISABLE_AVX2 1
+#define SDL_DISABLE_AVX512F 1
+#define SDL_DISABLE_MMX 1
+
+#define SDL_LEAN_AND_MEAN
+
 #endif /* SDL_build_config_windows_h_ */

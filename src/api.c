@@ -88,8 +88,9 @@ EXPORT void CALL DllConfig(HWND hParent)
     rp_deactivate_wait();
     con_open();
     config_window(hParent);
-    if (emu_active)
+    if (emu_active) {
         rp_activate();
+    }
 
 	window_open = false;
 }
@@ -103,8 +104,7 @@ EXPORT void CALL GetDllInfo(PLUGIN_INFO * PluginInfo)
     snprintf(
         PluginInfo->Name,
         sizeof(PluginInfo->Name),
-        "%s (%s)",
-        PLUGIN_NAME, PLUGIN_VERSION
+        PLUGIN_NAME " (" PLUGIN_VERSION ")"
     );
 }
 

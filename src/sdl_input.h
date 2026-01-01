@@ -28,10 +28,10 @@ extern int initialized;
 #define SDL_VER_STRING \
     TOSTRING(SDL_MAJOR_VERSION) "." \
     TOSTRING(SDL_MINOR_VERSION) "." \
-    TOSTRING(SDL_PATCHLEVEL)
+    TOSTRING(SDL_MICRO_VERSION)
 
 #define PLUGIN_NAME    "Octomino SDL Input Plugin"
-#define PLUGIN_VERSION "1.0"
+#define PLUGIN_VERSION "1.1"
 #define PLUGIN_REPO ""
 #define PLUGIN_ABOUT   \
     PLUGIN_NAME \
