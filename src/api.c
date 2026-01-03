@@ -27,8 +27,6 @@ BOOL WINAPI DllMain(HINSTANCE hinstDLL, DWORD fdwReason, LPVOID lpReserved)
 		gHinstDLL = hinstDLL;
         break;
     case DLL_PROCESS_DETACH:
-        fclose(logfile);
-        config_deinit();
         break;
     }
     return TRUE;
@@ -79,6 +77,12 @@ EXPORT void CALL CloseDLL(void)
     dlog("CloseDLL() call");
     rp_deactivate_wait();
     deinit();
+
+    if (logfile)
+    {
+        fclose(logfile);
+    }
+    config_deinit();
 }
 
 //EXPORT void CALL ControllerCommand(int Control, BYTE * Command) {}
